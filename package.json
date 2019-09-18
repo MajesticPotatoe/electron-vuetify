@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "@mdi/font": "^3.6.95",
     "core-js": "^2.6.5",
+    "eslint-config-vuetify": "^0.4.0",
     "roboto-fontface": "*",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
