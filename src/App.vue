@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app class="mainApp">
     <app-system-bar />
     <v-content>
       <router-view />
@@ -18,3 +18,11 @@
     }),
   }
 </script>
+
+<style lang="sass">
+  html
+    overflow: auto !important
+
+  .mainApp
+    background-color: #CCEBFF !important
+</style>

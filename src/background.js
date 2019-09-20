@@ -3,13 +3,15 @@
 import { app, protocol, BrowserWindow } from 'electron'
 import {
   createProtocol,
-  installVueDevtools,
+  // installVueDevtools,
 } from 'vue-cli-plugin-electron-builder/lib'
+import path from 'path'
 const isDevelopment = process.env.NODE_ENV !== 'production'
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let win
+let splash
 
 // Scheme must be registered before the app is ready
 protocol.registerSchemesAsPrivileged([{ scheme: 'app', privileges: { secure: true, standard: true } }])
@@ -20,6 +22,8 @@ function createWindow () {
     width: 800,
     height: 600,
     frame: false,
+    show: (!process.env.IS_TEST),
+    backgroundColor: '#CCEBFF',
     webPreferences: {
       nodeIntegration: true,
     },
@@ -28,11 +32,30 @@ function createWindow () {
   if (process.env.WEBPACK_DEV_SERVER_URL) {
     // Load the url of the dev server if in development mode
     win.loadURL(process.env.WEBPACK_DEV_SERVER_URL)
-    if (!process.env.IS_TEST) win.webContents.openDevTools()
+    if (!process.env.IS_TEST) {
+      // win.webContents.openDevTools()
+    }
   } else {
     createProtocol('app')
+    // create splash screen
+    splash = new BrowserWindow({
+      width: 400,
+      height: 425,
+      transparent: true,
+      frame: false,
+      icon: path.join(__dirname, 'favicon.ico'),
+    })
+
     // Load the index.html when not in development
     win.loadURL('app://./index.html')
+    splash.loadURL('app://./splash.html')
+    // splash.loadURL(path.join(__dirname, 'splash.html'))
+
+    // once ready destroy splash and show main win
+    win.once('ready-to-show', () => {
+      splash.destroy()
+      win.show()
+    })
   }
 
   win.on('closed', () => {
