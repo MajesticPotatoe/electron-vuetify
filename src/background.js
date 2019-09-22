@@ -22,7 +22,7 @@ function createWindow () {
     width: 800,
     height: 600,
     frame: false,
-    show: (!process.env.IS_TEST),
+    show: !process.env.IS_TEST,
     backgroundColor: '#CCEBFF',
     webPreferences: {
       nodeIntegration: true,
@@ -33,7 +33,7 @@ function createWindow () {
     // Load the url of the dev server if in development mode
     win.loadURL(process.env.WEBPACK_DEV_SERVER_URL)
     if (!process.env.IS_TEST) {
-      // win.webContents.openDevTools()
+      win.webContents.openDevTools()
     }
   } else {
     createProtocol('app')

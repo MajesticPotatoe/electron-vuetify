@@ -1,6 +1,6 @@
 <template>
   <v-app class="mainApp">
-    <app-system-bar />
+    <sys-bar />
     <v-content>
       <router-view />
     </v-content>
@@ -11,7 +11,7 @@
   export default {
     name: 'App',
     components: {
-      AppSystemBar: () => import(/* webpackChunkName: "app-system-bar" */ '@/components/app/AppSystemBar'),
+      SysBar: () => import(/* webpackChunkName: "sys-bar" */ '@/components/app/SysBar'),
     },
     data: () => ({
     //
