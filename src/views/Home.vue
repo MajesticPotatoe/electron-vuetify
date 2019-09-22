@@ -17,7 +17,7 @@
           Electron-Vuetify
         </h1>
         <p class="subheading font-weight-regular">
-          A lightweight boilerplate for electron 6 and vuetify 2.x
+          A feature rich boilerplate for electron 6 and vuetify 2.x
         </p>
       </v-col>
     </v-row>
