@@ -27,11 +27,13 @@ yarn install
 ```
 yarn dev
 ```
+** currently will not work due to electron specific store: `window` **
 
 ### Compiles and minifies for production
 ```
 yarn build
 ```
+** currently will not work due to electron specific store: `window` **
 
 ### Run your tests
 ```
@@ -45,7 +47,7 @@ yarn lint
 
 ### Starts Electron development environment
 ```
-electron-serve
+electron-dev
 ```
 
 ### Builds Electron for production
