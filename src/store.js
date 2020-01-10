@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-// Imports of individual modules
-import window from '@/store/window'
+// Imports all modules
+import * as modules from './store'
 
 Vue.use(Vuex)
 
@@ -13,10 +13,6 @@ const mutations = {}
 const actions = {}
 
 const plugins = []
-
-const modules = {
-  window,
-}
 
 const store = new Vuex.Store({
   state,

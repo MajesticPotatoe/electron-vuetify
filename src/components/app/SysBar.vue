@@ -1,6 +1,7 @@
 <template>
   <v-system-bar
-    v-if="!fullscreen"
+    v-if="!isMaximized"
+    :disabled="!isElectron"
     app
     window
     lights-out
@@ -31,6 +32,12 @@
 
     computed: {
       ...mapState('window', ['fullscreen']),
+      isElectron () {
+        return process.env.IS_ELECTRON
+      },
+      isMaximized () {
+        return this.isElectron ? this.maximized : false
+      },
     },
 
     methods: {
