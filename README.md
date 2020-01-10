@@ -27,13 +27,13 @@ yarn install
 ```
 yarn serve
 ```
-** currently will not work due to electron specific store: `window` **
+** electron based stores: `window` are not available and components using such will be disabled **
 
 ### Compiles and minifies for production
 ```
 yarn build
 ```
-** currently will not work due to electron specific store: `window` **
+** electron based stores: `window` are not available and components using such will be disabled **
 
 ### Run your tests
 ```
@@ -47,11 +47,11 @@ yarn lint
 
 ### Starts Electron development environment
 ```
-electron-dev
+electron:serve
 ```
 
 ### Builds Electron for production
 ```
-electron-build
+electron:build
 ```
 
