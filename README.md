@@ -12,7 +12,7 @@ vue add electron-builder
 ## Feature Set
 - vuetify 2.x
 - vuetify-loader
-- electron 6
+- electron 7
 - eslint-config-vuetify
 - vuex
 - vue-router
@@ -25,7 +25,7 @@ yarn install
 
 ### Compiles and hot-reloads for development
 ```
-yarn dev
+yarn serve
 ```
 ** currently will not work due to electron specific store: `window` **
 
