@@ -1,21 +1,16 @@
 # electron-vuetify
-Vue-Cli3 template of electron 6.0 with vuetify 2.0
-
-## Installing from scratch:
-```
-vue create app
-cd app
-vue add vuetify
-vue add electron-builder
-```
+Boilerplate project for electron 8.0 with vuetify 2.x
 
 ## Feature Set
+- electron 8 w/ electron-builder (beta)
+- jest + spectron
+- routing w/ vue-router
+- sass
 - vuetify 2.x
-- vuetify-loader
-- electron 7
-- eslint-config-vuetify
-- vuex
-- vue-router
+- vuetify eslint
+- vuetify-cli-plugin (coming soon)
+- vuetify-cli-preset
+- vuex + vuex-pathify
 - offline fonts
 
 ## Project setup
@@ -37,7 +32,7 @@ yarn build
 
 ### Run your tests
 ```
-yarn test
+yarn test:unit
 ```
 
 ### Lints and fixes files

@@ -4,7 +4,7 @@
     app
     window
     lights-out
-    class="sysbar"
+    class="app-system-bar white"
   >
     <v-spacer />
     <v-icon @click="minimizeWin">
@@ -20,36 +20,35 @@
 </template>
 
 <script>
-  import { mapState, mapActions } from 'vuex'
+  import { call, get } from 'vuex-pathify'
 
   export default {
-    name: 'SysBar',
+    name: 'AppSystemBar',
 
     data: () => ({
       //
     }),
 
     computed: {
-      ...mapState('window', ['fullscreen']),
+      ...get('window', ['fullscreen']),
       isElectron () {
         return process.env.IS_ELECTRON
       },
     },
 
     methods: {
-      ...mapActions('window', ['toggleMaximize', 'minimizeWin', 'closeWin']),
+      ...call('window', ['toggleMaximize', 'minimizeWin', 'closeWin']),
     },
   }
 </script>
 
 <style lang="sass">
-  .sysbar
+  .app-system-bar
     -webkit-app-region: drag !important
 
-    i
+    button
       color: black !important
       -webkit-app-region: no-drag
-      width: 25px
-      padding: 0 !important
-      margin: 0 !important
+      padding: 0px !important
+      margin: 5 !important
 </style>

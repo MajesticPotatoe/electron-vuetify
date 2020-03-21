@@ -1,25 +1,24 @@
 module.exports = {
+  devServer: {
+    disableHostCheck: true,
+  },
   pluginOptions: {
     electronBuilder: {
-      chainWebpackRendererProcess: config => {
-        if (process.env.NODE_ENV === 'development') {
-          config.plugins.delete('prefetch')
-        }
-      },
       // example build parameters
       mainProcessFile: 'src/background.js',
       builderOptions: {
         productName: 'ElectronVuetify',
-        appId: 'org.majesticportatoe.electronvuetify',
+        appId: 'org.majesticpotatoe.electronvuetify',
         win: {
-          icon: 'build/icons/icon.ico',
+          icon: './src/assets/icons/win/vuetify.ico',
           target: 'portable',
         },
         files: [],
       },
     },
-    transpileDependencies: [
-      'vuetify',
-    ],
   },
+  transpileDependencies: [
+    'vuetify',
+  ],
+
 }
