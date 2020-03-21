@@ -1036,10 +1036,10 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
-"@mdi/font@^4.8.95":
-  version "4.9.95"
-  resolved "https://registry.yarnpkg.com/@mdi/font/-/font-4.9.95.tgz#00ed2ffe289c9230f146e74559c07542d3f4475a"
-  integrity sha512-m2sbAs+SMwRnWpkMriBxEulwuhmqRyh6X+hdOZlqSxYZUM2C2TaDnQ4gcilzdoAgru2XYnWViZ/xPuSDGgRXVw==
+"@mdi/font@^5.0.45":
+  version "5.0.45"
+  resolved "https://registry.yarnpkg.com/@mdi/font/-/font-5.0.45.tgz#8eda40c41dc7ee9e7a51dbe9191c5c38b8482422"
+  integrity sha512-3sOO/UMyQqrmizW5zjvhKJP4FZFO7LblRw4G0alDxK1ekUwNxNXI7hYv8ACAv8H44riBuqlVJ7u39XDqv/Xwuw==
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
@@ -4754,10 +4754,10 @@ eslint-config-standard@^14.1.0:
   resolved "https://registry.yarnpkg.com/eslint-config-standard/-/eslint-config-standard-14.1.1.tgz#830a8e44e7aef7de67464979ad06b406026c56ea"
   integrity sha512-Z9B+VR+JIXRxz21udPTL9HpFMyoMUEeX1G251EQ6e05WD9aPVtVBn09XUmZ259wCMlCDmYDSZG62Hhm+ZTJcUg==
 
-eslint-config-vuetify@^0.4.1:
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/eslint-config-vuetify/-/eslint-config-vuetify-0.4.1.tgz#f99bf8b908d052fa8adf5ec5aae3d1ce9409c826"
-  integrity sha512-uMYJFQeEvo4hvICzZe8VyLlXG8ItXIEc/QzOiLm3rS1QuG7g1E/F42d8LHrlu8rytE1RDQXU3GxzGTRBtq3HFg==
+eslint-config-vuetify@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-vuetify/-/eslint-config-vuetify-0.5.0.tgz#c0756a440bfed15ae771372704658198d989adc6"
+  integrity sha512-8WqW0QYHPSXTN/pGj18xyCUpJ4A1D2v7995WgtDn2fwrp3iE7lPxWJAeBtVKvy9lvaTl2QWaUFJv7PbV8VwUoQ==
   dependencies:
     "@release-it/conventional-changelog" "^1.1.0"
     babel-eslint "^10.0.3"
