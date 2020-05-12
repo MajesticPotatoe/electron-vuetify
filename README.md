@@ -3,7 +3,7 @@ Boilerplate project for electron 8.0 with vuetify 2.x
 
 ## Feature Set
 - electron 8 w/ electron-builder (beta)
-- jest + spectron
+- jest + vue-test-utils
 - routing w/ vue-router
 - sass
 - vuetify 2.x

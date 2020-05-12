@@ -107,7 +107,7 @@
     data: () => ({
       features: [
         'Electron 8 w/ electron-builder (beta)',
-        'Jest + Spectron',
+        'Jest + vue-test-utils',
         'Routing w/ vue-router',
         'SASS',
         'Vuetify 2.x',
