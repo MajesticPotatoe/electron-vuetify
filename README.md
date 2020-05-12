@@ -14,9 +14,20 @@ Boilerplate project for electron 8.0 with vuetify 2.x
 - offline fonts
 
 ## Project setup
+If you use [Yarn](https://yarnpkg.com/en/) (strongly recommended):
 ```
 yarn install
 ```
+or if you use NPM:
+```
+// Delete the yarn.lock file
+// You may need to invoke electron-builder cli (requires @vue/cli v3+)
+// You can do this by running `vue invoke electron-builder`
+// Do not select spectron test as it will cause errors
+
+npm i
+```
+
 
 ### Compiles and hot-reloads for development
 ```
