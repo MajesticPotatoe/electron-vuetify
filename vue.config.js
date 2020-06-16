@@ -11,7 +11,7 @@ module.exports = {
         appId: 'org.majesticpotatoe.electronvuetify',
         win: {
           icon: './src/assets/icons/win/vuetify.ico',
-          target: 'portable',
+          target: 'nsis',
         },
         files: [],
       },
@@ -20,5 +20,4 @@ module.exports = {
   transpileDependencies: [
     'vuetify',
   ],
-
 }
