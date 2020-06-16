@@ -12,6 +12,7 @@ module.exports = {
         win: {
           icon: './src/assets/icons/win/vuetify.ico',
           target: 'nsis',
+          publish: ['github'],
         },
         files: [],
       },

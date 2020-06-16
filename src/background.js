@@ -1,6 +1,7 @@
 'use strict'
 
-import { app, protocol, BrowserWindow } from 'electron'
+import { app, protocol, BrowserWindow, ipcMain } from 'electron'
+import { autoUpdater } from 'electron-updater'
 import {
   createProtocol,
   /* installVueDevtools */
@@ -44,7 +45,29 @@ function createWindow () {
   win.on('closed', () => {
     win = null
   })
+
+  // sets up auto-updater
+  win.webContents.once('dom-ready', () => {
+    setTimeout(function () {
+      autoUpdater.checkForUpdatesAndNotify()
+    }, 2000)
+  })
+
+  // notify app that theres an update
+  autoUpdater.on('update-available', () => {
+    win.webContents.send('update_available')
+  })
+
+  // notify app that the update is downloaded
+  autoUpdater.on('update-downloaded', () => {
+    win.webContents.send('update_downloaded')
+  })
 }
+
+// restarts app
+ipcMain.on('restart_app', () => {
+  autoUpdater.quitAndInstall()
+})
 
 // Quit when all windows are closed.
 app.on('window-all-closed', () => {

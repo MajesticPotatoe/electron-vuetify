@@ -3,6 +3,8 @@
     <app-system-bar />
 
     <app-view />
+
+    <app-updater />
   </v-app>
 </template>
 
@@ -12,7 +14,8 @@
 
     components: {
       AppSystemBar: () => import(/* webpackChunkName: "app-system-bar" */ './components/AppSysBar'),
-      AppView: () => import('./components/AppView'),
+      AppUpdater: () => process.env.IS_ELECTRON ? import(/* webpackChunkName: "app-updater" */ './components/AppUpdater') : null,
+      AppView: () => import(/* webpackChunkName: "app-view" */'./components/AppView'),
     },
   }
 </script>
